@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site com Animação ao Passar o Mouse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #ec0092;
+        }
+
+        header {
+            background-color: #cc07ab;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-family: 'Herr Von Muellerhoff', cursive;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            font-family: 'Herr Von Muellerhoff', cursive;
+            color: #d60052;
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            width: calc(20% - 20px);
+            margin-bottom: 40px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.1);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* proporção 16:9 */
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+            margin-top: 40px;
+        }
+
+        .video-container iframe,
+        .video-container object,
+        .video-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .text-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .text-section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #920055;
+            color: #fff;
+            text-align: center;
+            padding: 1px 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Minha batatinha </h1>
+    </header>
+
+    <div class="container">
+        <h2>Fotos</h2>
+        <section class="gallery">
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/474x/7b/b1/be/7bb1be76affd01d8b85696ce09e88f68.jpg" alt="Imagem 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczPaL3YmP6bjEr0MqIXsb5TqnbMDQUA0PPz7hzwfrZvvE5iV-7ezVuQ9dEAdVZZlAcm0QC_pgblzpL_bFf8UkI_6ySyQOlKGJxGiJjR8yheM8qvO3IKRF_WJ9CHYi5aG5fE8de2VBfJUpkrHyie7jUuQ0Q=w1280-h720-s-no-gm" alt="Imagem 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczOq67H9AdOmnUf9ayupEjvMgpde4KtWyjjUpR5qNesUQ_QeD6U9fW_NgxZ0gUByITUV2qmBRXtpZDwiKyN0b1CQb4-EdEhtnKjESAsWame1u_W5DHffZr-yVKR6B63L3CvFlISpO0fHZQKEqaCM-KaRFg=w718-h957-s-no-gm" alt="Imagem 3">
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/736x/d2/44/e0/d244e049e150c66fbcbfb4b266acb3d2.jpg" alt="Imagem 4">
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/736x/6a/6b/5b/6a6b5b88f35fee7379d763fce1d31749.jpg" alt="Imagem 5">
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/736x/5e/1f/6f/5e1f6f98f7849e1b55f5753be55f63ea.jpg" alt="Imagem 6">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczOR_aD1SUjRbU5wE38_fzlD-owGym00sYuhyukMoyjM7VggGJlPlQ257d02v2LF1km4togdL2S2qbtmrRNWLhdcVg_lyHj8cet7qh-Qh-3JWyTOAeLe3O-ZWtWzKDZ7QeoEalACkS-YmEFSnq-zj-TmeQ=w442-h957-s-no-gm?authuser=0" alt="Imagem 7">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczOKU1wSbcOKOgDpxQb7RF5U_k_yzX6xg9YApUR8pHNYxL3lvZETlgRTwbvnEGFCeXlrAbTw2y-tf1s8jbUGQi3HdaxU4c1I6dmR7KFxz2yYcXFRQHpIZVKK1BQbEcyg1Aj4kPjncH2fE2229LHXS9oZFg=w538-h957-s-no-gm?authuser=0" alt="Imagem 8">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczPJdMjUM6lSIqkRpNnWfCiS6axp41S7TXfOkMO8XjVCPjDCiQvgVDPfLIMxPhvCSddSCMJR_hKvK8OpB69Eqd5MWPKxpi2FDIzCSI0_Bk4A4kA3aPGRE7uZoKhJKfdw6hajQWQRwi64II6pYhcfFcAmoQ=w538-h957-s-no-gm?authuser=0" alt="Imagem 9">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczPax36LdM8xpWsV042l9FAwROOAZ9kyCO7xVoEommikeNK3RErBZnyAuR1d6CV-V0tMN4Lba2D3JPCw8QwjZWKqRgpDNRP4Tjz-3sgTYFd_ehWgiFUJUp5fyzLA0JBPOdXsR64pkyHJGRI3C2FoZN4JeA=w538-h957-s-no-gm?authuser=0" alt="Imagem 10">
+            </div>
+        </section>
+
+        <h2>Vídeo</h2>
+        <div class="video-container">
+            <iframe width="466" height="829" src="https://www.youtube.com/embed/fZvBKtlRbfE" title="28 de abril de 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="text-section">
+            <h2>para ti meu amor</h2>
+          Anna, meu amor e minha batatinha,meu mundo, meu tudo!. A garota mais linda desse universo e a garato que eu mais amo!. Eu poderia fazer mil livros so descrever o quão incrivel você é pra mim!!.Anna eu te amo minha batatinha, espero que goste do presente:)
+
+
+
+            <p> </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>DE:Gustavo Jeziorski</p>
+    </footer>
+</body>
+</html>
+
+
